@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="orb orb-left"></div>
-    <div class="orb orb-right"></div>
+    <div class="shape shape-a"></div>
+    <div class="shape shape-b"></div>
 
     <header class="topbar">
       <a class="brand" href="#home">Ashish Lamrod</a>
@@ -31,20 +31,22 @@
     </header>
 
     <main id="home">
-      <section class="hero reveal">
+      <section class="hero reveal" style="--delay: 0s">
         <div class="hero-copy">
           <p class="eyebrow">Full Stack Software Engineer</p>
-          <h1>Building responsive web products with clean code and real impact.</h1>
+          <h1>Crafting user-friendly web products with clean engineering foundations.</h1>
           <p class="lead">
-            Dedicated professional with a proactive approach, strong communication,
-            and a focus on continuous learning across front-end and back-end
-            development.
+            Dedicated professional with proactive ownership, fast learning ability,
+            and strong communication across product and technical teams.
           </p>
+          <div class="hero-badges">
+            <span>Jodhpur, Rajasthan</span>
+            <span>Available for Full Stack Roles</span>
+            <span>Web Developer since 2023</span>
+          </div>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">View Projects</a>
-            <a class="btn btn-secondary" href="assets/resume.pdf" download
-              >Download Resume</a
-            >
+            <a class="btn btn-secondary" href="assets/resume.pdf" download>Download Resume</a>
           </div>
         </div>
         <div class="hero-image-wrap">
@@ -52,13 +54,39 @@
         </div>
       </section>
 
-      <section id="about" class="card-grid reveal">
+      <section class="stats reveal" style="--delay: 0.08s">
+        <article class="stat-card">
+          <p class="stat-number" data-count="3">0</p>
+          <p class="stat-label">Live GitHub Projects</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-number" data-count="4">0</p>
+          <p class="stat-label">Core Tech Stacks</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-number" data-count="3">0</p>
+          <p class="stat-label">Industry Simulations</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-number" data-count="2">0</p>
+          <p class="stat-label">Fluent Languages</p>
+        </article>
+      </section>
+
+      <section id="about" class="card-grid reveal" style="--delay: 0.16s">
         <article class="card">
-          <h2>Profile</h2>
+          <h2>Profile Summary</h2>
           <p>
-            Passionate about creating usable, scalable web applications using
-            JavaScript, React, Node.js, and Python. I collaborate well across teams
-            and enjoy solving product and technical problems.
+            Passionate about building scalable applications using JavaScript, React,
+            Node.js, and Python. Committed to team success, strong delivery standards,
+            and continuous learning in front-end and back-end development.
+          </p>
+        </article>
+        <article class="card">
+          <h2>Career Objective</h2>
+          <p>
+            To leverage my web development and software engineering skills to contribute
+            to innovative projects while continuously learning and growing.
           </p>
         </article>
         <article class="card">
@@ -72,19 +100,32 @@
             Kendriya Vidyalaya No. 1 (Army), Jodhpur (2022)
           </p>
         </article>
+      </section>
+
+      <section class="split reveal" style="--delay: 0.24s">
         <article class="card">
-          <h2>Core Skills</h2>
+          <h2>Technical Skills</h2>
           <ul>
-            <li>Python, JavaScript, Java</li>
-            <li>HTML, CSS, React, Node.js</li>
-            <li>MySQL, API Integration</li>
-            <li>Git, GitHub, VS Code, Postman</li>
-            <li>Generative AI, Excel, Word, PPT</li>
+            <li>Languages: Python, JavaScript, Java</li>
+            <li>Web: HTML, CSS, React, Node.js</li>
+            <li>Database: MySQL</li>
+            <li>Tools: Git, GitHub, VS Code, Postman</li>
+            <li>Other: Generative AI, Excel, Word, PPT</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h2>Soft Skills & Languages</h2>
+          <ul>
+            <li>Problem Solving</li>
+            <li>Teamwork</li>
+            <li>Adaptability</li>
+            <li>Time Management</li>
+            <li>English (Fluent), Hindi (Fluent)</li>
           </ul>
         </article>
       </section>
 
-      <section id="projects" class="reveal">
+      <section id="projects" class="reveal" style="--delay: 0.32s">
         <div class="section-head">
           <p class="eyebrow">Selected Work</p>
           <h2>Projects</h2>
@@ -93,74 +134,77 @@
           <article class="project-card">
             <h3>Shreeji Dental Website</h3>
             <p>
-              Responsive dental clinic website with service pages, fast load time,
-              and conversion-oriented CTA sections.
+              Responsive dental clinic website with service pages, high clarity sections,
+              and conversion-oriented call-to-actions.
             </p>
             <p class="stack">HTML - CSS - JavaScript</p>
             <p>
-              <a href="https://github.com/ash1515-pixel/shreeji-dental-site" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+              <a href="https://github.com/ash1515-pixel/shreeji-dental-site" target="_blank" rel="noopener noreferrer">View GitHub Repository</a>
             </p>
           </article>
           <article class="project-card">
             <h3>Telematics Operations Dashboard</h3>
             <p>
-              Web dashboard concept for tracking devices, live metrics, and API-based
-              status updates for operations monitoring.
+              Dashboard concept for device tracking, live status monitoring, and
+              API-based operational visibility.
             </p>
             <p class="stack">React - Node.js - REST APIs</p>
             <p>
-              <a href="https://github.com/ash1515-pixel/telematics-ops-dashboard" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+              <a href="https://github.com/ash1515-pixel/telematics-ops-dashboard" target="_blank" rel="noopener noreferrer">View GitHub Repository</a>
             </p>
           </article>
           <article class="project-card">
             <h3>Portfolio CMS Starter</h3>
             <p>
-              Modular content-focused portfolio template with reusable components,
-              responsive sections, and clean deployment-ready structure.
+              Reusable portfolio structure designed for easy content updates,
+              modular sections, and deployment readiness.
             </p>
             <p class="stack">JavaScript - CSS - GitHub Pages</p>
             <p>
-              <a href="https://github.com/ash1515-pixel/portfolio-cms-starter" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+              <a href="https://github.com/ash1515-pixel/portfolio-cms-starter" target="_blank" rel="noopener noreferrer">View GitHub Repository</a>
             </p>
           </article>
         </div>
       </section>
 
-      <section id="experience" class="timeline reveal">
+      <section id="experience" class="timeline reveal" style="--delay: 0.4s">
         <div class="section-head">
-          <p class="eyebrow">Experience</p>
-          <h2>Work & Certifications</h2>
+          <p class="eyebrow">Experience & Credentials</p>
+          <h2>Professional Journey</h2>
         </div>
         <article class="timeline-item">
           <h3>Web Developer</h3>
           <p class="meta">Lamrod Telematics Pvt. Ltd. - Feb 2023 - Present</p>
           <p>
-            Developed and maintained responsive web applications, implemented new
-            features with cross-functional teams, and integrated APIs for dynamic data
-            handling.
+            Developed and maintained responsive web applications using modern front-end
+            technologies, collaborated with teams to ship features, and handled API and
+            backend integration for dynamic data handling.
           </p>
         </article>
         <article class="timeline-item">
-          <h3>Virtual Experience Programs</h3>
+          <h3>Certifications & Simulations</h3>
           <p class="meta">Forage - August 2025</p>
-          <p>
-            Deloitte Australia Technology Job Simulation, Tata Cybersecurity Security
-            Analyst Job Simulation, and AWS APAC Solutions Architecture Program.
-          </p>
+          <ul>
+            <li>Deloitte Australia Technology Job Simulation</li>
+            <li>Tata Cybersecurity Security Analyst Job Simulation</li>
+            <li>AWS APAC Solutions Architecture Virtual Experience Program</li>
+          </ul>
         </article>
       </section>
 
-      <section id="contact" class="contact reveal">
+      <section id="contact" class="contact reveal" style="--delay: 0.48s">
         <div>
           <p class="eyebrow">Get In Touch</p>
           <h2>Let's build something useful together.</h2>
+          <p class="lead light">
+            Open to opportunities in full stack development, web product engineering,
+            and collaborative software teams.
+          </p>
         </div>
         <div class="contact-box">
           <a href="tel:+916376615476">+91 63766 15476</a>
           <a href="mailto:ac858247@gmail.com">ac858247@gmail.com</a>
-          <a href="https://www.linkedin.com/in/ashish-lamrod-0b72411b5/" target="_blank" rel="noopener noreferrer"
-            >LinkedIn Profile</a
-          >
+          <a href="https://www.linkedin.com/in/ashish-lamrod-0b72411b5/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
           <p>Jodhpur, Rajasthan, India</p>
         </div>
       </section>
