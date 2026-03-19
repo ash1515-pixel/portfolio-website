@@ -42,6 +42,16 @@ const statObserver = new IntersectionObserver(
 
 document.querySelectorAll('.stat-number').forEach((node) => statObserver.observe(node));
 
+const scrollProgress = document.getElementById('scrollProgress');
+const updateScrollProgress = () => {
+  if (!scrollProgress) return;
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
+  scrollProgress.style.width = `${progress}%`;
+};
+window.addEventListener('scroll', updateScrollProgress, { passive: true });
+updateScrollProgress();
+
 const heroCard = document.querySelector('.hero-image-wrap');
 if (heroCard) {
   heroCard.addEventListener('mousemove', (event) => {
