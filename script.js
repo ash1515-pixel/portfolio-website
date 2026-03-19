@@ -65,3 +65,41 @@ if (heroCard) {
     heroCard.style.transform = '';
   });
 }
+
+const certModal = document.getElementById('certModal');
+const certModalTitle = document.getElementById('certModalTitle');
+const certFrame = document.getElementById('certFrame');
+const certModalClose = document.getElementById('certModalClose');
+
+if (certModal && certModalTitle && certFrame) {
+  document.querySelectorAll('.cert-card').forEach((card) => {
+    const openBtn = card.querySelector('.cert-open');
+    if (!openBtn) return;
+
+    openBtn.addEventListener('click', () => {
+      const file = card.getAttribute('data-cert-file');
+      const title = card.getAttribute('data-cert-title') || 'Certificate Preview';
+      if (!file) return;
+
+      certModalTitle.textContent = title;
+      certFrame.src = file;
+      certModal.showModal();
+    });
+  });
+
+  const closeModal = () => {
+    certModal.close();
+    certFrame.src = '';
+  };
+
+  certModalClose?.addEventListener('click', closeModal);
+  certModal.addEventListener('click', (event) => {
+    const rect = certModal.getBoundingClientRect();
+    const outside =
+      event.clientX < rect.left ||
+      event.clientX > rect.right ||
+      event.clientY < rect.top ||
+      event.clientY > rect.bottom;
+    if (outside) closeModal();
+  });
+}

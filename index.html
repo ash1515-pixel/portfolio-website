@@ -184,46 +184,54 @@
           <h2>Certificates</h2>
         </div>
         <div class="cert-grid">
-          <article class="cert-card cert-featured">
+          <article class="cert-card cert-featured" data-cert-title="Skillected Webinar Certificate" data-cert-file="assets/certificates/skillected-certificate.pdf">
             <img src="assets/certificates/skillected-preview.png" alt="Skillected Certificate Preview" />
             <div class="cert-content">
               <h3>Skillected Webinar Certificate</h3>
               <p>Live Project: Build a Real-Time Search Filter App</p>
               <div class="cert-actions">
-                <a href="assets/certificates/skillected-certificate.pdf" target="_blank" rel="noopener noreferrer">View</a>
+                <button class="cert-open" type="button">Preview</button>
                 <a href="assets/certificates/skillected-certificate.pdf" download>Download</a>
               </div>
             </div>
           </article>
 
-          <article class="cert-card">
+          <article class="cert-card" data-cert-title="Core Program Certificate" data-cert-file="assets/certificates/main-certificate.pdf">
             <h3>Core Program Certificate</h3>
             <p>Program completion certificate.</p>
             <div class="cert-actions">
-              <a href="assets/certificates/main-certificate.pdf" target="_blank" rel="noopener noreferrer">View</a>
+              <button class="cert-open" type="button">Preview</button>
               <a href="assets/certificates/main-certificate.pdf" download>Download</a>
             </div>
           </article>
 
-          <article class="cert-card">
+          <article class="cert-card" data-cert-title="Deloitte Certificate" data-cert-file="assets/certificates/deloitte-certificate.pdf">
             <h3>Deloitte Certificate</h3>
             <p>Professional virtual experience certificate.</p>
             <div class="cert-actions">
-              <a href="assets/certificates/deloitte-certificate.pdf" target="_blank" rel="noopener noreferrer">View</a>
+              <button class="cert-open" type="button">Preview</button>
               <a href="assets/certificates/deloitte-certificate.pdf" download>Download</a>
             </div>
           </article>
 
-          <article class="cert-card">
+          <article class="cert-card" data-cert-title="Tata Certificate" data-cert-file="assets/certificates/tata-certificate.pdf">
             <h3>Tata Certificate</h3>
             <p>Cybersecurity job simulation certificate.</p>
             <div class="cert-actions">
-              <a href="assets/certificates/tata-certificate.pdf" target="_blank" rel="noopener noreferrer">View</a>
+              <button class="cert-open" type="button">Preview</button>
               <a href="assets/certificates/tata-certificate.pdf" download>Download</a>
             </div>
           </article>
         </div>
       </section>
+
+      <dialog id="certModal" class="cert-modal">
+        <div class="cert-modal-head">
+          <h3 id="certModalTitle">Certificate Preview</h3>
+          <button type="button" id="certModalClose">Close</button>
+        </div>
+        <iframe id="certFrame" title="Certificate Preview"></iframe>
+      </dialog>
 
       <section id="experience" class="timeline reveal" style="--delay: 0.4s">
         <div class="section-head">
