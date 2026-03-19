@@ -4,10 +4,9 @@ if (yearNode) yearNode.textContent = String(new Date().getFullYear());
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
     });
   },
   { threshold: 0.15 }
@@ -42,3 +41,17 @@ const statObserver = new IntersectionObserver(
 );
 
 document.querySelectorAll('.stat-number').forEach((node) => statObserver.observe(node));
+
+const heroCard = document.querySelector('.hero-image-wrap');
+if (heroCard) {
+  heroCard.addEventListener('mousemove', (event) => {
+    const rect = heroCard.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    heroCard.style.transform = `rotateX(${(-y * 6).toFixed(2)}deg) rotateY(${(x * 8).toFixed(2)}deg) translateY(-2px)`;
+  });
+
+  heroCard.addEventListener('mouseleave', () => {
+    heroCard.style.transform = '';
+  });
+}
